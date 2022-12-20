@@ -1,0 +1,187 @@
+!- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+!                                                               !
+!                    XMAPTOOLS Default File                     !
+!             Last update (30.05.2019),  Pierre Lanari           !
+!                                                               !
+!- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+! 
+! Element / element / Oxide / OXIDE
+! EDIT WITH CAUTION (No empty line without the comment symbol (!)
+!
+!
+Na  na  Na2O    NA2O
+Mg  mg  MgO     MGO
+Al  al  Al2O3   AL2O3
+Si  si  SiO2    SIO2
+P   p   P2O5    P2O5
+S   s   SO2     SO2
+F   f   F_m     F_m
+Cl  cl  Cl2O    CL2O
+K   k   K2O     K2O
+Ca  ca  CaO     CAO
+Ti  ti  TiO2    TIO2
+V   v   V2O3    V2O3
+Cr  cr  Cr2O3   CR2O3
+Mn  mn  MnO     MNO
+Fe  fe  FeO     FEO
+Fe3 fe3 Fe2O3 FE2O3
+Co  co  CoO     COO
+Ni  ni  NiO     NIO
+Cu  cu  CuO     CUO
+Zn  zn  ZnO     ZNO
+Zr  zr  ZrO2    ZRO2
+Ag  ag  AgO     AGO
+Cd  cd  CdO     CDO
+Sn  sn  SnO2    SNO2
+Ce  ce  Ce2O3   CE2O3
+As  as  As2O5   AS2O5
+Sb  sb  Sb2O3   SB2O3
+Cs  cs  Cs2O    CS2O
+La  la  La2O3   LA2O3
+Nd  nd  Nd2O3   NdO2
+Pb  pb  PbO     PBO
+Sr  sr  SrO     SRO
+Th  sr  ThO2    THO2
+U   u   UO2     UO2
+Yt  yt  Y2O3    Y2O3
+!Yt is Y (must be different that 'Y' coordinate)
+Sm  sm  Sm2O3   SM2O3
+Gd  gd  Gd2O3   GD2O3
+Dy  dy  Dy2O3   DY2O3
+Pr  pr  Pr2O3   PR2O3
+Au  Au  Au2O3   AU2O3
+!
+!
+! The following isotopes are available for LA-ICP-MS data
+!
+7Li    7li    Li  LI
+9Be    9be    Be  BE
+11B    11B    B   B
+12C    12C    C   C
+13C    13C    C   C
+23Na   23na   Na  NA
+24Mg   24mg   Mg  MG
+25Mg   25mg   Mg  MG
+27Al   27al   Al  AL
+28Si   28si   Si  SI
+29Si   29si   Si  SI
+31P    31p    P   P
+34S    34S    S   S
+35Cl   35cl   Cl  CL
+39K    39k    K   K
+43Ca   43ca   Ca  CA
+44Ca   44ca   Ca  CA
+45Sc   45sc   Sc  SC
+47Ti   47ti   Ti  TI
+49Ti   49ti   Ti  TI
+51V    51v    V   V
+52Cr   52cr   Cr  CR
+53Cr   53cr   Cr  CR
+55Mn   55mn   Mn  MN
+56Fe   56fe   Fe  FE
+57Fe   57fe   Fe  FE
+59Co   59co   Co  CO
+60Ni   60ni   Ni  NI
+62Ni   62ni   Ni  NI
+65Cu   65cu   Cu  CU
+66Zn   66zn   Zn  ZN
+69Ga   69ga   Ga  GA
+71Ga   71ga   Ga  GA
+72Ge   72ge   Ge  GE
+73Ta   73ta   Ta  TA
+74Ge   74ge   Ge  GE
+75As   75as   As  AS
+77Se   77se   Se  SE
+81Br   81br   Br  BR
+82Se   82se   Se  SE
+85Rb   85rb   Rb  RB
+88Sr   88sr   Sr  SR
+89Y    89y    Yt  YT
+90Zr   90zr   Zr  ZR
+93Nb   93nb   Nb  NB
+95Mo   95mo   Mo  MO
+98Mo   98mo   Mo  MO
+103Rh  103rh  Rh  RH
+104Pd  104pd  Pd  PD
+105Pd  105pd  Pd  PD
+107Ag  107ag  Ag  AG
+111Cd  111cd  Cd  CD
+115In  115in  In  IN
+118Sn  118sn  Sn  SN
+120Sn  120sn  Sn  SN
+121Sb  121sb  Sb  SB
+125Te  125te  Te  TE
+133Cs  133cs  Cs  CS
+137Ba  137ba  Ba  BA
+139La  139la  La  LA
+140Ce  140ce  Ce  CE
+141Pr  141pr  Pr  PR
+146Nd  146nd  Nd  ND
+147Sm  147sm  Sm  SM
+151Eu  151eu  Eu  EU
+153Eu  153eu  Eu  EU
+157Gd  157gd  Gd  GD
+158Gd  158gd  Gd  GD
+159Tb  159tb  Tb  TB
+163Dy  163dy  Dy  DY
+165Ho  165ho  Ho  HO
+166Er  166er  Er  ER
+169Tm  169tm  Tm  TM
+172Yb  172yb  Yb  YB
+175Lu  175lu  Lu  LU
+178Hf  178hf  Hf  HF
+181Ta  181ta  Ta  TA
+182W   182w   W   W
+184W   184w   W   W
+185Re  185re  Re  Re
+189Os  189os  Os  OS
+192Os  192os  Os  OS
+193Ir  193ir  Ir  IR
+195Pt  195pt  Pt  PT
+197Au  197au  Au  AU
+202Hg  202hg  Hg  HG
+205Tl  205tl  Tl  TL
+204Pb  204pb  Pb  PB
+206Pb  206pb  Pb  PB
+207Pb  207pb  Pb  PB
+208Pb  208pb  Pb  PB
+209Bi  209bi  Bi  BI
+232Th  232th  Th  TH
+238U   238u   U   U
+!
+! The following oxides are available to load standardized X-ray maps.
+! The function TTQuanti (Transfert to Quanti) can be used to transfert
+!     the data from the X-ray to the Quanti parts. 
+!
+! We used _s because this name will be unused (correspondance with std name of elements).
+!
+SiO2    sio2    SiO2_s    SIO2_s
+TiO2    tio2    TiO2_s    TIO2_s
+Al2O3   al2o3   Al2O3_s   AL2O3_s
+FeO     feo     FeO_s     FEO_s
+MnO     mno     MnO_s     MNO_s
+MgO     mgo     MgO_s     MGO_s
+CaO     cao     CaO_s     CAO_s
+Na2O    na2o    Na2O_s    NA2O_s
+K2O     k2o     K2O_s     K2O_s
+H2O     h2o     H2O_s     H2O_s
+!
+! The following elements are for metaloids.
+!     - Fe_m is X-ray data for Fe metal [Name of X-ray images].
+!     - Fe_ms is Fe metal standardized (Wt% of Fe) [Name of elements for the point analyses].
+! 
+Fe_m    fe_m    Fe_ms   FE_MS
+Cu_m    cu_m    Cu_ms   CU_MS
+!
+! The following labels are for the BSE, SEI and TOPO images
+! They should not be standardized but they can be trasnfered to Quanti and Result
+!      using TTQuanti button. 
+! 
+BSE     bse     BSE_s   BSE_s
+SEI     sei     SEI_s   SEI_s
+TOPO    topo    TOPO_s  TOPO_s
+COMP    comp    COMP_s  COMP_s
+!
+!
+CL_Ti  cl_ti  TiO2_Cl  TIO2_CL
+!

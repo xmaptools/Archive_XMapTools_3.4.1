@@ -1,0 +1,48 @@
+
+                    ---------------------------------- 
+                   |  Welcome to XMapTools 3.4.1...   |
+                    ----------------------------------
+                    
+Before you get started, I would like to remind you a few basic rules for citing results obtained with XMapTools:
+	- Cite both publications describing the program (e.g. Lanari et al. 2014, 2019)
+	- Mention the version of the program used to produce data and generate figures
+	- Avoid citing XMapTools only in supplementary materials
+	
+Example: Data reduction was performed using XMapTools 3.4.1 (Lanari et al. 2014; 2019)
+
+Thanks for reading this message and for helping me (by using and properly citing the program) to keep it free!
+
+
+>> You can now close this window safely and start using the new version of XMapTools or discover the new features below...
+
+
+
+
+### What is new in XMapTools version 3.4.1  -  Released on 20.05.20 ###
+
+This update: 
+ 
+- Adds a new module the 'Histogram Tool' for generating histograms from compositional maps based on different normalisation schemes (counts, probability, probability density function, cumulative counts, cumulative probability function). The module also includes several tools for exporting data (tables, histogram); automatic binning algorithms; for plotting any gaussian distribution on top of the histogram
+- Adds a new module the 'EPMA Converter' that readily converts raw data from JEOL microprobe (both SUN and WINDOWS) into XMapTools-compatible format. Several files containing maps and standard data can be converted at the same time. Detailed explanations are provided in the user guide
+- Adds a new mode to the functionality 'Transfer to Quanti' that converts maps of element wt% to oxide wt%. This allows SEM users to import compositional maps of element wt% (Si, Al, etc.) and to transform them to oxide wt% (SiO2, Al2O3, etc.) to be used with the external functions in Quanti
+- Adds a subroutine 'XMT_StructuralFormula' for quick calculation of a general structural formulas using oxide name detection. The efficiency of the external functions using this subroutine is significantly improved. External functions will be progressively upgraded in a near future (see below)
+- Adds a general structural formula function 'StructForm (all elem.)' performing the normalisation based on every map (element) available. The old function will be removed in a future update
+- Provides an improved external function for biotite (StructFctBiotite) fixing a few issues in the site repartition model and adding Ti and Mn end-members
+- Adds a new oxybarometer for epidote-garnet (by Jesse Walters)
+- Adds new help functionalities for downloading tutorial data or the user-guide directly from the server 
+
+Other changes:  
+
+- Fixes a major issue in the auto-update module preventing XMapTools to be updated in MATLAB 2014b
+- Fixes several minor stability issues of the interface (especially when XMapTools starts)
+- Fixes a minor issue that affected the behaviour of the option 'Delete' in Quanti
+- Fixes a minor issue affecting the display while 'none' is selected in the workspace 'Quanti'
+- Fixes a minor zoom issue in the workspace 'Results' that resulted in a reset of the zoom options while changing the element
+- Fixes a stability issue in the functionality 'transfer to quanti'
+- Fixes several minor formating issues for the text displayed in exported figures
+
+Use of this software is subject to the original Software License Agreement that accompanied the software being updated. 
+
+For more details information regarding XMapTools, please visit 
+http://www.xmaptools.com or contact pierre.lanari@geo.unibe.ch
+

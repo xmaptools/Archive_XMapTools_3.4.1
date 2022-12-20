@@ -1,0 +1,277 @@
+! #########################################################################
+! #               List of external functions XMapTools 3                  #
+! #########################################################################
+! 
+! System file > list of thermometers and options :
+! - Modes 1-2-4: 
+!     	Type > Mineral > Name > Function > Output > Input >
+! - Mode 3:
+!     	Type > Mineral > Name > Function > Output > Input > Ext. variable >
+!
+!
+! *** New 2.5.1 (P. Lanari, 20.05.18) 
+!	Structural Formulas have been edited:
+!	New mineral abbreviations for end-members following the recommendations of
+!     	Whitney & Evans (2010), American Mineralogist 95, 185-187
+! 	DOI:10.2138/am.2010.3371
+! 
+!
+! *** New 1.6.4 (P. Lanari, 03.08.13) 
+!      	External variables are fixed before calling the external function
+!     	for example >PressureKbar(15)>.
+!      	the name of the variable must be obvious including the unit used 
+!      	because only this name will be displayed to the user.
+!
+!     	>>> WARNING <<<
+!     	Only 'P, T and P-T / spot mode (3)' functions can use external 
+!      	variables (see above).
+!
+!
+!
+! EDIT WITH CAUTION
+! No empty line without the comment symbol (!)
+!
+!
+! #########################################################################
+!
+!
+!
+! ListFunction.txt version 3.4.1 (20.05.2019)
+!
+!
+!
+!
+!------------------------- Structural Formulas (1) ------------------------
+!
+! * * * * * AMPHIBOLES * * * * *
+1>Amphibole>CaAmp-StructForm>StructFctAmphiboles>Si4 Aliv Alvi Al_T2 Al_M2 XFe XMg Ti_M2 Mg_M2 Fe_M2 Fe_M13 Mg_M13 Ca_M4 Na_M4 Na_A V_A XTr XFtr XTs XPrg XGln>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O> 
+1>Amphibole>CaAmp-StructForm-Fe3>StructFctAmphiboles3>Si4 Aliv Alvi Fe2 Fe3 XFe XMg Ti_M2 Ca_M4 Na_M4 Na_A V_A XAl_T2 XSi_T2 XTi_M2 XFe3_M2 XFeMg_M2 XAl_M2 XNa_M4 XCa_M4>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+!
+!
+! * * * * * BIOTITE * * * * * 
+1>Biotite>Bio-StructForm>StructFctBiotite>Si_T1 Si_T2 Al_T2 Al_M1 Fe_M1 Mg_M1 Mn_M1 V_M1 Ti_M2 Fe_M2 Mg_M2 Mn_M2 K_A Ca_A Na_A V_A XMg XFe XAnn XPhl XSid XEas XTibt XMnbt Xsum>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+!
+!
+! * * * * * BRUCITE * * * * * 
+1>Brucite>Bruc-StructForm>StructFctBruciteROMAIN>Si Ti Al Fe Mn Mg Ca Na K XMg As Sb Cs>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O As2O5 Sb2O3 Cs2O>
+!
+!
+! * * * * * CHLORITE * * * * *
+1>Chlorite>Chl-StructForm-(Si<3)>StructFctChlorite>Aliv Alvi Fe3 Fe2 Al_M4 Si_T1 Si_T2 Al_T2 V_M1 Al_M2M3 Al_M1 Mg_M1 Fe_M1 Mg_M2M3 Fe_M2M3 X_Mg DeltaLacune XAme XClc XDph XSud Xsum>SiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+1>Chlorite>Chl-StructForm-(All)>StructFctChloriteAll>SiT Aliv Alvi DT XAlvi fe2 fe3 XMg XFe V_M1 Al_M1 Mg_M1 Fe2_M1 Al_M23 Mg_M23 Fe2_M23 Al_M4 Mg_M4 Fe2_M4 XAlfchl XAme XClc XDph XSud Xsum>SiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+!
+!
+! * * * * * CHLORITOID * * * * * 
+1>Chloritoid>Ctd-StructForm>StructFctChloritoid>Si Al Fe Mg Mn XMg XCld XFcld XMcld>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+!
+!
+! * * * * * CORDIERITE * * * * *
+1>Cordierite>Cor-StructForm>StructFctCordierite>Si_T Ti_T Al_T Al_M Fe_M Mg_M XCrd XFcrd>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+!
+!
+! * * * * * CLINO-PYROXENES * * * * * 
+1>Clinopyroxene>Cpx-StructForm-Cats-Fe3>StructFctCpxFe3>Si_T1 Al_T1 XMg XFe Fe2 Fe3 Al_M1 Mg_M1 Fe2_M1 Fe3_M1 Ca_M2 Na_M2 XJd XDi XHd XCats XAcm Xsum SumM1 SumM2>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+1>Clinopyroxene>Cpx-StructForm-Cats>StructFctCpx>Si_T1 Al_T1 XMg XFe Al_M1 Mg_M1 Fe_M1 Ca_M2 Na_M2 XJd XDi XHd XCats Xsum SumM1 SumM2>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+1>Clinopyroxene>Cpx-StructForm>StructFctCpxW>Si_T1 XMg XFe Al_M1 Mg_M1 Fe_M1 Ca_M2 Na_M2 XJd XDi XHd Xsum SumM1 SumM2>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+1>Clinopyroxene>Cpx-StructForm-Fe3>StructFctCpxWFe3>Si_T1 XMg XFe Fe2 Fe3 Al_M1 Mg_M1 Fe_M1 Ca_M2 Na_M2 XJd XDi XHd XAcm Xsum SumM1 SumM2>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+!
+!
+! * * * * * EPIDOTE * * * * *
+1>Epidote>Epi-StructForm>StructFctEpidote>Si_T Al_M1 Al_M2 Al_M3 Fe_M1 Fe_M3 Ca_A XEp XCzo XFep>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+1>Epidote>Allanite-StructForm>StructFctAllanite>Si Al Mg Fe2 Fe3 Mn Ca Yt Th Ti La Ce Pr Nd Sm Gd Dy U Pb Na Sr Sum_REE Sum_M Sum_A Sum_REE_Th Sum_A_M>SiO2 Al2O3 MgO FeO MnO CaO Y2O3 ThO2 TiO2 La2O3 Ce2O3 Pr2O3 Nd2O3 Sm2O3 Gd2O3 Dy2O3 UO2 PbO Na2O SrO>
+!
+!
+! * * * * * FELDSPARS * * * * * 
+1>Feldspars>Feld-StrucForm>StructFctFeldspar>Si_T Al_T Na_M1 Ca_M1 K_M1 XAb XAn XMc Xsum SumT SumM>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+!
+!
+! * * * * * MAGNETITE * * * * * 
+1>Magnetite>Mgt-StructForm>StructFctMagnetite>Fe2 Fe3 Cr Mg Mn Ni Ti Si Al Ca Zn XFe3>FeO Cr2O3 MgO MnO NiO TiO2 SiO2 Al2O3 CaO ZnO>
+!
+!
+! * * * * * NEPHELINE * * * * * 
+1>Nepheline>Neph-StrucForm>StructFctNepheline>Si_T Al_T Na_M K_M Ca_M Vac_M XNph XKls SumT SumM>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+!
+!
+! * * * * * GARNET * * * * * 
+1>Garnet>Grt-StructForm-Fe3>StructFctGarnetFe3>XAlm XSps XPrp XGrs XAdr Si Ti Al Mg Fe2 Fe3 Mn Ca>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+1>Garnet>Grt-StructForm>StructFctGarnet>XAlm XSps XPrp XGrs Si Al Mg Fe Mn Ca>SiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+1>Garnet>Grt-StructForm-Ti>StructFctGarnetTi>XAlm XSps XPrp XGrs Si Ti Al Mg Fe Mn Ca>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+1>Garnet>Grt-StructForm-Fe3-Advanced(slow)>StructFctGarnetFe3JR>XAlm XSps XPrp XGrs XAdr SI TI AL MG FE2 FE3 MN CA NA>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O>
+!
+!
+! * * * * * GARNET (H2O - ## Development ## J. Reynes) * * * * * 
+1>Garnet_DEV>Grt_Meth1-OctOpti>StructFctGarnetH2O_OctOpti>Si Ti Al V Cr Fe3 Fe2 Mn Mg Ca H SumTetra SumOcta SumDod SumCharges_vect FeO Fe2O3 Total>SiO2 TiO2 Al2O3 V2O3 Cr2O3 FeO MnO MgO CaO H2O>
+1>Garnet_DEV>Grt_Meth2-ChargeOpti>StructFctGarnetH2O_ChargeOpti>Si Ti Al V Cr Fe3 Fe2 Mn Mg Ca H SumTetra SumOcta SumDod SumCharges_vect FeO Fe2O3 Total>SiO2 TiO2 Al2O3 V2O3 Cr2O3 FeO MnO MgO CaO H2O>
+1>Garnet_DEV>Grt_Meth3-MoroiteSub>StructFctGarnetH2O_MoSub>Si Ti Al V Cr Fe3 Fe2 Mn Mg Ca H SumTetra SumOcta SumDod SumCharges_vect FeO Fe2O3 Total>SiO2 TiO2 Al2O3 V2O3 Cr2O3 FeO MnO MgO CaO H2O>
+!
+!
+! * * * * * WHITE MICA * * * * * 
+1>K-WhiteMica>Phg-StructForm>StructFctPhengite>Si4 Al_T2 Si_T2 V_M1 Fe_M1 Mg_M1 Al_M2M3 Mg_M2M3 Fe_M2M3 XMg XFe K_A V_A Na_A Sum_A XCel XMs XPrl XPg Xsum>SiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+1>K-WhiteMica>Mica-StructForm>StructFctMica>Si4 Al_T2 Si_T2 V_M1 Fe_M1 Mg_M1 Al_M2M3 Mg_M2M3 Fe_M2M3 XMg XFe K_A V_A Na_A Sum_A XBt XCel XMs XPrl XPg Xsum>SiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+!
+!
+! * * * * * OLIVINE * * * * *
+1>Olivine>Oliv-StructForm>StructFctOlivine>Si Fe Mg Mn Fo Fa Tep>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+!
+!
+! * * * * * OPX * * * * * 
+1>Orthopyroxene>Opx-StrucForm>StructFctOpx>Si_T1 Si_T2 Al_T2 Al_M1 XMg XFe Mg_M1 Fe_M1 Fe_M2 Mg_M2 XEn XFs XMgts>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+!
+!
+! * * * * * SERPENTINE * * * * * 
+1>Serpentine>Serp-StructForm>StructFctSerpentine>Si_T Fe_M Mg_M XFe XMg Cr_M Ni_M>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O NiO Cr2O3>
+1>Serpentine>Serp-TsAntigorite>StructFctTsAntigorite>Si Al Fe Mg XFe XMg Cr Ni>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O NiO Cr2O3>
+!
+!
+! * * * * * SPINEL * * * * *
+1>Spinel>FeMg_Spi-StructForm>StructFctFeMgSpinel>Al_M Fe_M Mg_M XHc XSpl>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+!
+!
+! * * * * * STAUROLITE * * * * *
+1>Staurolite>Sta-StructForm>StructFctStaurolite>Si Al Fe Mg Mn St Mst Mnst>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+!
+!
+! * * * * * TITANITE * * * * *
+1>Titanite>Ttn-StructForm>StructFctTitanite>Si_T Ti_T Mg_M Mn_M Fe3_M Al_M Ti_M Ca K Na F OH O Sum_an Sum XTtn XAlFeF XAlFeOH>F_m Na2O K2O MgO CaO MnO Fe2O3 Al2O3 SiO2 TiO2 FeO>
+!
+!
+!
+!
+! #########################################################################
+!---------------------- P, T and P-T / map mode (2) -----------------------
+!
+! * * * * * AMPHIBOLES * * * * * 
+2>Amphibole>Amp-T Holland&Blundy 1994 (Amp+Pl)>ThermoFctAmphHollandB>T Xab Xan>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+2>Amphibole>Amp-T Holland&Blundy 1994 (Amp+Pl)-Fe3>ThermoFctAmphHollandBFe3>T Xab Xan>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+2>Amphibole>Amp-T Holland&Blundy 1994 (Amp+Pl+Qtz)>ThermoFctAmphHollandA>T Xab Xan>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+2>Amphibole>Amp-P Anderson & Smith 1995>ThermoFctAmphAnderson>P Tinput Altot>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+2>Amphibole>Amp-P Schmidt 1992>ThermoFctAmphSchmidt>P Altot>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+2>Amphibole>Amp-P Johnson & Rutherford 1989>ThermoFctAmphJohnson>P Altot>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+2>Amphibole>Amp-P Pmin J&R 1989>ThermoFctAmphJohnsonPMin>P Altot>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+2>Amphibole>Amp-P Pmax J&R 1989>ThermoFctAmphJohnsonPMax>P Altot>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+2>Amphibole>Amp-P Hollister etal 1987>ThermoFctAmphHollister>P Altot>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+2>Amphibole>Amp-P Hammarston & Zen 1986>ThermoFctAmphHamm>P Altot>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+2>Amphibole>Amp-P-T (Amp+Pl)>ThermoFctAmphLanariPTa>P T Xab Xan>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+2>Amphibole>Amp-P-T (Amp+Pl+Qtz)>ThermoFctAmphLanariPTb>P T Xab Xan>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+!
+! * * * * * BIOTITE * * * * * 
+2>Biotite>Bio-T Henry et al. 2005>ThermoFctBioHenry>T TiBio XMg>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+!
+! * * * * * CHLORITE * * * * * 
+2>Chlorite>Chl-T Lanari LWV-Chl(2)>ThermoFctChlLanariLWV2>T Aliv>SiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+2>Chlorite>Chl-T Lanari LWV-Chl(1)-Fe3>ThermoFctChlLanariLWV1>T Aliv>SiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+2>Chlorite>Chl-T Bourdelle etal 2013>ThermoFctChlBourdelle>T Al4>SiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+2>Chlorite>Chl-T Inoue etal 2009 (low-Si)>ThermoFctChlInoue2009>T Al4>SiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+2>Chlorite>Chl-T Inoue etal 2009 (high-Si)>ThermoFctChlInoue2>T Al4>SiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+2>Chlorite>Chl-T Zang&Fyfe 1995>ThermoFctChlZang>T Al4>SiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+2>Chlorite>Chl-T Jowett 1991>ThermoFctChlJowett>T Al4>SiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+2>Chlorite>Chl-T Hillier&Velde 1991>ThermoFctChlHillier>T Al4>SiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+2>Chlorite>Chl-T Cathelineau 1988>ThermoFctChlCathelineau>T Al4>SiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+2>Chlorite>Chl-T Kranidiotis&MacLean 1987>ThermoFctChlKranidiotis>T Al4>SiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+2>Chlorite>Chl-T Cathelineau&Nieva 1985>ThermoFctChlCatheNieva>T Al4>SiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+!
+! * * * * * CLINO-PYROXENES * * * * * 
+2>Clinopyroxene>Cpx-P-T E&G (Cpx-Grt-Phg)>ThermoFctCpxLanariPTa>P T>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+2>Clinopyroxene>Cpx-P-T E&G Fe3 (Cpx-Grt-Phg)>ThermoFctCpxLanariPTa2>P T>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+2>Clinopyroxene>Cpx-P-T Rav (Cpx-Grt-Phg)>ThermoFctCpxLanariPTb>P T>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+2>Clinopyroxene>Cpx-P-T Rav Fe3 (Cpx-Grt-Phg)>ThermoFctCpxLanariPTb2>P T>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+2>Clinopyroxene>Cpx-P (Cpx-Amph-Pla)>ThermoFctCpxLanariPa>P>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+2>Clinopyroxene>Cpx-P-fT (Cpx-Amph-Pla)>ThermoFctCpxLanariPfTa>P Tf>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+!
+! * * * * * EPIDOTE * * * * *
+2>Epidote>Ep-fO2 W20 (Ep-Grt)>OxibaroGE_EpVar_Walters>logfO2>SiO2 TiO2 Al2O3 Cr2O3 Y2O3 FeO MnO MgO CaO Na2O K2O>
+!
+! * * * * * GARNET * * * * * 
+2>Garnet>Gar-T Creighton 2009>ThermoFctCreightonGrt>T lnApyr lnAspe MN>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O Cr2O3>
+2>Garnet>Gar-T Kawasaki&Motoyoshi 2007>ThermoFctKawasakiGrt>T Ti_VI Si_VI>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+!
+! * * * * * PHENGITE * * * * * 
+2>Phengite>Phg-T Massonne&Schreyer 1987>ThermoFctMassone>P Si4 T>SiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+!
+! * * * * * RUTILE * * * * * 
+!2>Rutile>Rut-T Zack et al. 2004>ThermoFctZack>T Zn>SiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+!
+! * * * * * QUARTZ * * * * * 
+2>Quartz>Ti-in-Qz Thomas et al. (2010)>ThermoFctQzThomas2010>T Ti_ppm XQzTiO2>SiO2 TiO2 TiO2_Cl>
+!
+!
+!
+! #########################################################################
+!---------------------- P, T and P-T / spot mode (3) ----------------------
+!
+! * * * * * AMPHIBOLE / PLAGIOCLASE * * * * *
+3>Amphibole+Plagioclase>T- Holland&Blundy 1994a>NThermoAPHolland1994a>T Pressure Y>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>PressureKbar(10)>
+3>Amphibole+Plagioclase>T- Holland&Blundy 1994a (Fe3)>NThermoAPHolland1994aFe3>T Pressure Y>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>PressureKbar(10)>
+3>Amphibole+Plagioclase>T- Blundy&Holland 1990>NThermoAPBlundy1990>T lnKd Pressure Y>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>PressureKbar(10)>
+!
+! * * * * * CHLORITE / CHLORITOID * * * * *
+3>Chlorite+Chloritoid>T- Vidal etal 1999>NThermoCCVidal1999>T lnKd>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+!
+! * * * * * GARNET / BIOTITE * * * * *
+3>Garnet+Biotite>T- Perchuk 1983>NThermoGBPerchuk1983>T lnKd>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+3>Garnet+Biotite>T- Thompson 1976>NThermoGBThompson1976>T lnKd Pinput>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>PressureKbar(10)>
+3>Garnet+Biotite>T- Goldman&Albee 1977>NThermoGBGoldman1977>T lnKd>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+3>Garnet+Biotite>T- Holdaway&Lee 1977>NThermoGBHoldaway1977>T lnKd>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>PressureKbar(10)>
+!
+! * * * * * GARNET / MICA * * * * *
+3>Garnet+Mica>T- Krogh&Raheim 1978>NThermoGMKrogh1978>T lnKd Pinput>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>PressureKbar(10)>
+3>Garnet+Mica>T- Green&Hellman 1982-1>NThermoGMGreen19821>T lnKd Pinput>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>PressureKbar(10)>
+!
+! * * * * * GARNET / CHLORITE * * * * *
+3>Garnet+Chlorite>T- Dickenson&Hewitt 1986>NThermoGCDickenson1986>T lnKd Pinput>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>PressureKbar(10)>
+3>Garnet+Chlorite>T- Grambling 1990>NThermoGCGrambling1990>T lnKd Pinput>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>PressureKbar(10)>
+!
+! * * * * * GARNET / AMPHIBOLE * * * * *
+3>Garnet+Amphibole>T- Ravna 2000>NThermoGARavna2000>T XCaGrt XMnGrt lnKd>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+3>Garnet+Amphibole>T- Perchuk etal 1985>NThermoGAPerchuk1985>T lnKd XCaGrt>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+3>Garnet+Amphibole>T- Graham&Powell 1984>NThermoGAGraham1984>T lnKd XCaGrt>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+!
+! * * * * * GARNET / CLINOPYROXENE * * * * *
+3>Garnet+Clinopyroxene>T- Ravna 2000>NThermoGCpRavna2000>T P lnKd>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>PressureKbar(15)>
+3>Garnet+Clinopyroxene>T- Ravna 2000(Fe3)>NThermoGCpRavna2000Fe3>T P lnKd>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>PressureKbar(15)>
+3>Garnet+Clinopyroxene>T- Ai 1994>NThermoGCpAi1994>T P lnKd>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>PressureKbar(15)>
+3>Garnet+Clinopyroxene>T- Sengupta etal 1989>NThermoGCpSengupta1989>T P lnKd>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>PressureKbar(15)>
+3>Garnet+Clinopyroxene>T- Pattison&Newton 1989>NThermoGCpPattison1989>T P lnKd>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>PressureKbar(15)>
+3>Garnet+Clinopyroxene>T- Krogh 1988>NThermoGCpKrogh1988>T P lnKd>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>PressureKbar(15)>
+3>Garnet+Clinopyroxene>T- Powell 1985>NThermoGCpPowell1985>T P lnKd>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>PressureKbar(15)>
+3>Garnet+Clinopyroxene>T- Dahl 1980>NThermoGCpDahl1980>T P lnKd>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>PressureKbar(15)>
+3>Garnet+Clinopyroxene>T- Ganguly 1979>NThermoGCpGanguly1979>T P lnKd>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>PressureKbar(15)>
+3>Garnet+Clinopyroxene>T- Ellis&Green 1979>NThermoGCpEllis1979>T lnKd>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>PressureKbar(15)>
+3>Garnet+Clinopyroxene>T- Mori&Green 1978>NThermoGCpMori1978>T lnKd>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+3>Garnet+Clinopyroxene>T- Raheim&Green 1974>NThermoGCpRaheim1974>T P lnKd>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>PressureKbar(15)>
+3>Garnet+Clinopyroxene>T- Mysen&Heier 1972>NThermoGCpMysen1972>T lnKd>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+!
+! * * * * * GARNET / EPIDOTE * * * * *
+3>Garnet+Epidote>fO2- Walters 2020>OxibaroGEWalters>logfO2>SiO2 TiO2 Al2O3 Cr2O3 Y2O3 FeO MnO MgO CaO Na2O K2O>Temperature_dC(530) Pressure_GPa(2.16)>
+!
+!
+! #########################################################################
+!------------------------- General Functions (4) --------------------------
+!
+! * * * * * GENERAL - FUNCTIONS * * * * *
+4>General>StructForm (all elem.)>StructFctGenerale_V2>Si>SiO2>
+4>General>Gnrle-StructForm>StructFctGenerale>Si Ti Al Fe Mn Mg Ca Na K XMg>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+4>General>Gnrle-MolEl>StructFctGeneraleAt>Si Ti Al Fe Mn Mg Ca Na K Sum>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+4>General>Gnrle-MeanAtomicNumber>StructFctGeneralMAN>Z_mean>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+4>General>Gnrle-Oxide2Results>StructFctOx2Res>Na2O MgO Al2O3 SiO2 P2O5 SO2 Cl2O K2O CaO TiO2 V2O5 Cr2O3 MnO FeO CoO NiO CuO ZnO ZrO2 AgO CdO SnO2 CeO2 As2O5 Sb2O3 Cs2O La2O3 Nd2O3 PbO SrO ThO2 UO2 Y2O3 Sm2O3 Gd2O3 Dy2O3 Pr2O3>Na2O MgO Al2O3 SiO2 P2O5 SO2 Cl2O K2O CaO TiO2 V2O5 Cr2O3 MnO FeO CoO NiO CuO ZnO ZrO2 AgO CdO SnO2 CeO2 As2O5 Sb2O3 Cs2O La2O3 Nd2O3 PbO SrO ThO2 UO2 Y2O3 Sm2O3 Gd2O3 Dy2O3 Pr2O3>
+4>General>Gnrle-Intensity2Results>StructFctIn2Res>Na Mg Al Si P S Cl K Ca Ti V Cr Mn Fe Co Ni Cu Zn Zr Ag Cd Sn Ce As Sb Cs La Nd Pb Sr Th U Yt Sm Gd Dy Pr BSE SEI TOPO>Na Mg Al Si P S Cl K Ca Ti V Cr Mn Fe Co Ni Cu Zn Zr Ag Cd Sn Ce As Sb Cs La Nd Pb Sr Th U Yt Sm Gd Dy Pr BSE SEI TOPO>
+!
+!
+! #########################################################################
+!------------------------- Density Functions (5) --------------------------
+!
+! * * * * * CPX * * * * *
+5>Chlorite>Density_Chl_All>DensityChloriteAll>DensChl XAlfchl XAmes XMgAmes XFeAmes XClin XDaph XSud XSum>SiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+!
+! * * * * * CPX * * * * *
+5>Clinopyroxene>Density_Cpx_Opmh>DensityCpxOmph>DensCpx XJd XDi XHd XCats XAcm>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+!
+! * * * * * GARNET * * * * *
+5>Garnet>Density_Grt>DensityGrt>DensGrt XAlm XPrp XGrs XSps XAdr>SiO2 TiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+!
+! * * * * * K-WHITE-MICA * * * * *
+5>K-WhiteMica>Density_KWM>DensityKWM>DensKWM Xcel Xmu Xpyr Xpar>SiO2 Al2O3 FeO MnO MgO CaO Na2O K2O>
+!
+!
+!

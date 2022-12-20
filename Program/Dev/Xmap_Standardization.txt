@@ -1,0 +1,38 @@
+!- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+!                                                                 !
+!           XMAPTOOLS Advanced Standardization parameters         !
+!             Last update (07.07.2017)    Pierre Lanari           !
+!                                                                 !
+!- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+! 
+! * ICOT: INT_Limit     BACK_Limit
+!   Intensity cut-off threshold (intensity) for background correction.
+!   If the Intensity is above INT_Limit and the background above BACK_Limit
+!   the background correction will not be applied by the automated method. 
+!   
+!
+! * PFIT: LIM_Fraction 
+!   A polynomial fit will be calculated and plotted if the spread of the 
+!   concentrations (C_max - C_min) > LIM_Fraction * C_max and if the 
+!   intensity is < INT_Limit and background lower than BACK_Limit
+!
+! * PLOX: TOL_OxPer
+!   If the polyfit function is used the reference point is defined at 
+!   X = max(X) + TOL_OxPer * max(X)
+!
+! * OUTL: SIG_1     SIG_2
+!   Criteria used for outlier rejection (sigma). SIG_1 is used during the 
+!   first test and SIG_2 during the second test. 
+!
+!
+!
+!
+* ICOT: 500 200
+* PFIT: 0.4
+* PLOX: 0.05
+* OUTL: 4   2
+
+
+
+
+

@@ -1,0 +1,26 @@
+!- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+!                                                                 !
+!                    XMAPTOOLS Variables File                     !
+!              Last update (15.07.2017),  Pierre Lanari           !
+!                                                                 !
+!- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+! 
+! Name / Code (matrix format, use .* ./ and .^)
+! EDIT WITH CAUTION (No empty line without the comment symbol (!)
+!
+! DON’T PUT any mathematical symbols ’+’, ‘-‘, ‘/‘, ‘*’ in the variable name !!!
+! use sum_XY, ratio_XY, mult_XY, etc
+!
+! 
+XMg		Mg./(Mg+Fe)
+XMg_M1		Mg_M1./(Mg_M1+Fe_M1)
+XFe		Fe./(Mg+Fe)
+XFe_M1		Fe_M1./(Mg_M1+Fe_M1)
+XFe3		Fe3./(Fe2+Fe3)
+!
+Al_tot		Aliv+Alvi
+sum_AlSi	Al+Si
+!
+ratio_YbGd	172Yb./157Gd
+!
+NewVariName	NewComputation

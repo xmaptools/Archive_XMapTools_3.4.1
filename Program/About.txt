@@ -1,0 +1,85 @@
+
+XMapTools is developed by Prof. Dr. Pierre Lanari (University of Bern)
+
+Contact: pierre.lanari@geo.unibe.ch
+Website: https://www.xmaptools.com/
+
+
+  ---------------------------------------------------------------------
+ |           XMapTools version 3.4.1  -  Released on 20.05.20         |
+  ---------------------------------------------------------------------
+
+This XMapTools 3.4.1 update is strongly recommended for all users and contains several new features as well as improvements to stability and compatibility. This update
+ 
+- Adds a new module the 'Histogram Tool' for generating histograms from compositional maps based on different normalisation schemes (counts, probability, probability density function, cumulative counts, cumulative probability function). The module also includes several tools for exporting data (tables, histogram); automatic binning algorithms; for plotting any gaussian distribution on top of the histogram
+- Adds a new module the 'EPMA Converter' that readily converts raw data from JEOL microprobe (both SUN and WINDOWS) into XMapTools-compatible format. Several files containing maps and standard data can be converted at the same time. Detailed explanations are provided in the user guide
+- Adds a new mode to the functionality 'Transfer to Quanti' that converts maps of element wt% to oxide wt%. This allows SEM users to import compositional maps of element wt% (Si, Al, etc.) and to transform them to oxide wt% (SiO2, Al2O3, etc.) to be used with the external functions in Quanti
+- Adds a subroutine 'XMT_StructuralFormula' for quick calculation of a general structural formulas using oxide name detection. The efficiency of the external functions using this subroutine is significantly improved. External functions will be progressively upgraded in a near future (see below)
+- Adds a general structural formula function 'StructForm (all elem.)' performing the normalisation based on every map (element) available. The old function will be removed in a future update
+- Provides an improved external function for biotite (StructFctBiotite) fixing a few issues in the site repartition model and adding Ti and Mn end-members
+- Adds a new oxybarometer for epidote-garnet (by Jesse Walters)
+- Adds new help functionalities for downloading tutorial data or the user-guide directly from the server 
+
+Other changes:  
+
+- Fixes a major issue in the auto-update module preventing XMapTools to be updated in MATLAB 2014b
+- Fixes several minor stability issues of the interface (especially when XMapTools starts)
+- Fixes a minor issue that affected the behaviour of the option 'Delete' in Quanti
+- Fixes a minor issue affecting the display while 'none' is selected in the workspace 'Quanti'
+- Fixes a minor zoom issue in the workspace 'Results' that resulted in a reset of the zoom options while changing the element
+- Fixes a stability issue in the functionality 'transfer to quanti'
+- Fixes several minor formating issues for the text displayed in exported figures
+
+
+
+Use of this software is subject to the original Software License Agreement that accompanied the software being updated. 
+
+For more details information regarding XMapTools, please visit 
+http://www.xmaptools.com or contact pierre.lanari@geo.unibe.ch
+
+
+
+
+- - - - - - -
+ DESCRIPTION
+- - - - - - -
+
+XMapTools provides advanced numerical tools in a guided environment to explore and visualise your data in your own way. It incorporates a large variety of options for data processing, data calibration and data visualisation via single and multi-channel maps or via binary, ternary and spider diagrams. Find out more at: https://www.xmaptools.com/
+
+
+
+
+- - - - - -
+ CITATION
+- - - - - -
+Please use the following citations in your publications when you refer to XMapTools. The version of the program should be specified just after the name, e.g. Mapping data were processed using XMapTools 3.3.1 (Lanari et al. 2014; 2019).
+
+Please use at least one of the official XMapTools logo in your talk / poster along with the references while images have been generated using XMapTools.
+
+Main software references:
+(1) Lanari, P., Vidal, O., De Andrade, V., Dubacq, B., Lewin, E., Grosch, E., Schwartz, S. (2014) XMapTools: a MATLAB??-based program for electron microprobe X-ray image processing and geothermobarometry. Computers and Geosciences. 62, 227-240
+(2) Lanari, P., Vho, A., Bovay, T., Airaghi, L., Centrella, S., (2019). Quantitative compositional mapping of mineral phases by electron probe micro-analyser. Geological Society of London, Special Publication, 478, 39-63
+
+Software references for specific tools/applications:
+- Trace element mapping: Raimondo, T., Payne, J., Wade, B., Lanari, P., Clark, C., Hand, M., (2017). Trace element mapping by LA-ICP-MS: assessing geochemical mobility in garnet. Contributions to Mineralogy and Petrology, 172, 17
+- Local bulk composition and density correction: Lanari, P., & Engi, M. (2017). Local bulk composition effects on metamorphic mineral assemblages, Reviews in Mineralogy and Geochemistry, 83, 55-102
+- Bingo-Antidote: Lanari, P. & Duesterhoeft, E. (2019). Modelling metamorphic rocks using equilibrium thermodynamics and internally consistent databases: past achievements, problems and perspectives. Journal of Petrology, 60, 19-56
+- Density maps: Centrella, S., Putnis, A., Lanari, P., Austrheim, H. (2018). Textural and chemical evolution of pyroxene during hydration and deformation: a consequence of retrograde metamorphism. Lithos, 296-199, 245-264
+
+
+- - - - -
+ LICENSE
+- - - - -
+
+XMapTools is distributed in an Double Regime: Academic and Commercial.
+
+In the Academic and Public Research World, XMapTools is distributed under the terms of the Scientific Software Open Source Academic For Free License. This License sets the program and the code GRATIS and Open Source, and grants Freedom to use, copy, study, modify and redistribute it. But these policies hold only within the Academic and Public Research world. Thus the Academic World can be reassured that the normal research academic policies in working with scientific software are granted by this license. And it goes even beyond GNU-GPL, since it explicitly sets GRATIS the software.
+
+On the other hand, we would like to reassure also the Commercial World. Indeed, the Scientific Software Open Source Academic For Free License IS NOT like other, commonly spread Open Source Free licenses, GNU-GPL or other. In the sense that the present License well keeps into account all the needs and the way of functioning of the Commercial and Profit Institutions World.
+
+Into this world, XMapTools program is going to be distributed under other Licenses, to be negotiated from case to case. In this case it is a paying code, and exclusiveness for a certain merceological sector, or even full exclusiveness can be agreed with commercial institutions. This protects commercial institutions investements on applied research lines using the XMapTools code against concurrential actions, a posteriori possible to concurrent commercial institutions for codes licensed under commonly spread Open Source Free licenses. We agree with the Commercial World that these licenses revealed not compatible with the ordinary way of functioning in the Commercial World.
+
+This is the reason why we choosed a different licence policy for XMapTools: to make Commercial Insitutions profit of the Basic Research ByProducts. And at the same time, to make the Basic Research benefit of the funding coming from the Commercial World, to finance the Basic Research itself.
+
+Please, if you are a commercial institution, take the time to read at least the Preamble of the Scientific Software Open Source Academic For Free License. And you will realize that this is exactly the policy and the philosophy that can work to conciliate your way of functioning and the normal behaviour of academic research. Such as everybody can profit of the exchange between the two worlds.
+

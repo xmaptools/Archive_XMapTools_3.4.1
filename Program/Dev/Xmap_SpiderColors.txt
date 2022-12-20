@@ -1,0 +1,48 @@
+!- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+!                                                                 !
+!                      XMAPTOOLS Spider color File                !
+!              Last update (26.04.2018)    Pierre Lanari          !
+!                                                                 !
+!- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+! 
+! > Name of the colorer
+! Color code (RGB) - 1 
+! Color code (RGB) - 1 
+! Color code (RGB) - …
+!
+! EDIT WITH CAUTION (At least three lines are required for each block starting with >)
+! At least one blank line must be inserted between two blocks
+! ONLY USE DIGITS BETWEEN 0 AND 1 TO DEFINE THE RGB COLORS
+!
+
+> X-Original (2)
+0.3 	0 	0.3
+0.3 	1 	0.3
+
+
+> X-Bred (2)
+0     0     	1
+1     0     	0
+
+
+> X-Greyl (2)
+0    	0.5   	0
+1    	1    	0
+
+
+> X-Pinor (2)
+0.8	0	0.8
+1	0.5	0
+
+
+> X-Shicy (2)
+0.7	0.5	0
+0	1	1
+
+
+> X-Jet (4)
+0     0     1
+0     1     1
+1     1     0
+1     0     0
+
